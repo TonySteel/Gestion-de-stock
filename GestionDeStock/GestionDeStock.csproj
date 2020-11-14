@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4BE2394-4138-4985-9154-BBA0AE86339C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestionDeStock</RootNamespace>
+    <AssemblyName>GestionDeStock</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\user\source\repos\gestion-de-stock\WcfGestionStockPublish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F37E4FC294D3000E4C3A71F715A9E4A41562AF9F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GestionDeStock_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\ServiceWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="FormEspaceEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEspaceEmploye.Designer.cs">
+      <DependentUpon>FormEspaceEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCatalogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCatalogue.Designer.cs">
+      <DependentUpon>FormCatalogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEspaceClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEspaceClient.Designer.cs">
+      <DependentUpon>FormEspaceClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPageAccueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPageAccueil.Designer.cs">
+      <DependentUpon>FormPageAccueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormEspaceEmploye.resx">
+      <DependentUpon>FormEspaceEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCatalogue.resx">
+      <DependentUpon>FormCatalogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEspaceClient.resx">
+      <DependentUpon>FormEspaceClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPageAccueil.resx">
+      <DependentUpon>FormPageAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\ServiceWCF\GestionDeStock.ServiceWCF.ClsCmdClient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceWCF\GestionDeStock.ServiceWCF.ClsCmdFournisseur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceWCF\GestionDeStock.ServiceWCF.ClsFournisseur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceWCF\GestionDeStock.ServiceWCF.ClsPanier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceWCF\GestionDeStock.ServiceWCF.ClsStockProduit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceWCF\GestionDeStock.ServiceWCF.ClsUtilisateur.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceWCF\Service1.wsdl" />
+    <None Include="Connected Services\ServiceWCF\WcfGestionStock.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceWCF\WcfGestionStock1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceWCF\WcfGestionStock2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionDeStock_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClassGestionStock.ClsCmdClient.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClassGestionStock.ClsCmdFournisseur.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClassGestionStock.ClsFournisseur.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClassGestionStock.ClsPanier.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClassGestionStock.ClsStockProduit.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClassGestionStock.ClsUtilisateur.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClsCmdClient.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClsCmdFournisseur.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClsFournisseur.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClsPanier.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClsStockProduit.datasource" />
+    <None Include="Properties\DataSources\WcfGestionStock.ClsUtilisateur.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table Utilisateur.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table Statut.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table Cmd Fournisseur.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fournisseur.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table Produit.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table Panier.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table Catégorie Produit.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table Cmd Client.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceWCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceWCF\WcfGestionStock.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

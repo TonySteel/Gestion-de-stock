@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://desktop-d5tcr83/SynchroWCF/WcfGestionStock.Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://desktop-d5tcr83/SynchroWCF/WcfGestionStock.Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://desktop-d5tcr83/SynchroWCF/WcfGestionStock.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfGestionStock.ClassGestionStock" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Loguer_InputMessage">
+    <wsdl:part name="parameters" element="tns:Loguer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Loguer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoguerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireTableUtilisateurSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:LireTableUtilisateurSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireTableUtilisateurSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LireTableUtilisateurSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifUtilisateurSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifUtilisateurSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifUtilisateurSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifUtilisateurSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireStockProduitSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:LireStockProduitSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireStockProduitSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LireStockProduitSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SommeProduitSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:SommeProduitSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SommeProduitSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SommeProduitSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireCategorieSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:LireCategorieSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireCategorieSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LireCategorieSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifProduitSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifProduitSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifProduitSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifProduitSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireTablePanierSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:LireTablePanierSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireTablePanierSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LireTablePanierSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SommePanierSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:SommePanierSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SommePanierSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SommePanierSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifPanierSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifPanierSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifPanierSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifPanierSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireCmdClientSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:LireCmdClientSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireCmdClientSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LireCmdClientSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SommeCmdClientSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:SommeCmdClientSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SommeCmdClientSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SommeCmdClientSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifCmdClientSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifCmdClientSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifCmdClientSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifCmdClientSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireFournisseurSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:LireFournisseurSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireFournisseurSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LireFournisseurSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifFournisseurSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifFournisseurSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifFournisseurSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifFournisseurSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireCmdFournisseurSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:LireCmdFournisseurSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LireCmdFournisseurSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LireCmdFournisseurSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifCmdFournisseurSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifCmdFournisseurSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AjoutSupModifCmdFournisseurSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutSupModifCmdFournisseurSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SommeCmdFournisseurSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:SommeCmdFournisseurSql" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SommeCmdFournisseurSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SommeCmdFournisseurSqlResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Loguer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Loguer" message="tns:IService1_Loguer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoguerResponse" message="tns:IService1_Loguer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LireTableUtilisateurSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LireTableUtilisateurSql" message="tns:IService1_LireTableUtilisateurSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LireTableUtilisateurSqlResponse" message="tns:IService1_LireTableUtilisateurSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifUtilisateurSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AjoutSupModifUtilisateurSql" message="tns:IService1_AjoutSupModifUtilisateurSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AjoutSupModifUtilisateurSqlResponse" message="tns:IService1_AjoutSupModifUtilisateurSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LireStockProduitSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LireStockProduitSql" message="tns:IService1_LireStockProduitSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LireStockProduitSqlResponse" message="tns:IService1_LireStockProduitSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SommeProduitSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SommeProduitSql" message="tns:IService1_SommeProduitSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SommeProduitSqlResponse" message="tns:IService1_SommeProduitSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LireCategorieSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LireCategorieSql" message="tns:IService1_LireCategorieSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LireCategorieSqlResponse" message="tns:IService1_LireCategorieSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifProduitSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AjoutSupModifProduitSql" message="tns:IService1_AjoutSupModifProduitSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AjoutSupModifProduitSqlResponse" message="tns:IService1_AjoutSupModifProduitSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LireTablePanierSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LireTablePanierSql" message="tns:IService1_LireTablePanierSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LireTablePanierSqlResponse" message="tns:IService1_LireTablePanierSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SommePanierSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SommePanierSql" message="tns:IService1_SommePanierSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SommePanierSqlResponse" message="tns:IService1_SommePanierSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifPanierSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AjoutSupModifPanierSql" message="tns:IService1_AjoutSupModifPanierSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AjoutSupModifPanierSqlResponse" message="tns:IService1_AjoutSupModifPanierSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LireCmdClientSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LireCmdClientSql" message="tns:IService1_LireCmdClientSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LireCmdClientSqlResponse" message="tns:IService1_LireCmdClientSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SommeCmdClientSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SommeCmdClientSql" message="tns:IService1_SommeCmdClientSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SommeCmdClientSqlResponse" message="tns:IService1_SommeCmdClientSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifCmdClientSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AjoutSupModifCmdClientSql" message="tns:IService1_AjoutSupModifCmdClientSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AjoutSupModifCmdClientSqlResponse" message="tns:IService1_AjoutSupModifCmdClientSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LireFournisseurSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LireFournisseurSql" message="tns:IService1_LireFournisseurSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LireFournisseurSqlResponse" message="tns:IService1_LireFournisseurSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifFournisseurSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AjoutSupModifFournisseurSql" message="tns:IService1_AjoutSupModifFournisseurSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AjoutSupModifFournisseurSqlResponse" message="tns:IService1_AjoutSupModifFournisseurSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LireCmdFournisseurSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LireCmdFournisseurSql" message="tns:IService1_LireCmdFournisseurSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LireCmdFournisseurSqlResponse" message="tns:IService1_LireCmdFournisseurSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifCmdFournisseurSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AjoutSupModifCmdFournisseurSql" message="tns:IService1_AjoutSupModifCmdFournisseurSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AjoutSupModifCmdFournisseurSqlResponse" message="tns:IService1_AjoutSupModifCmdFournisseurSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SommeCmdFournisseurSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SommeCmdFournisseurSql" message="tns:IService1_SommeCmdFournisseurSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SommeCmdFournisseurSqlResponse" message="tns:IService1_SommeCmdFournisseurSql_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Loguer">
+      <soap:operation soapAction="http://tempuri.org/IService1/Loguer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTableUtilisateurSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/LireTableUtilisateurSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifUtilisateurSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/AjoutSupModifUtilisateurSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireStockProduitSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/LireStockProduitSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SommeProduitSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/SommeProduitSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireCategorieSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/LireCategorieSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifProduitSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/AjoutSupModifProduitSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTablePanierSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/LireTablePanierSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SommePanierSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/SommePanierSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifPanierSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/AjoutSupModifPanierSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireCmdClientSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/LireCmdClientSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SommeCmdClientSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/SommeCmdClientSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifCmdClientSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/AjoutSupModifCmdClientSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireFournisseurSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/LireFournisseurSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifFournisseurSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/AjoutSupModifFournisseurSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireCmdFournisseurSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/LireCmdFournisseurSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AjoutSupModifCmdFournisseurSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/AjoutSupModifCmdFournisseurSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SommeCmdFournisseurSql">
+      <soap:operation soapAction="http://tempuri.org/IService1/SommeCmdFournisseurSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://desktop-d5tcr83/SynchroWCF/WcfGestionStock.Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

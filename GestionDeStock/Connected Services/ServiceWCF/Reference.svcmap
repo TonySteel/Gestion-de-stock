@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="609808c5-05d3-4ff2-9cd1-c7d9a6dd386b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/SynchroWCF/WcfGestionStock.Service1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfGestionStock.xsd" MetadataType="Schema" ID="58744a21-0c55-407d-9f1b-a3e140598670" SourceId="1" SourceUrl="http://desktop-d5tcr83/SynchroWCF/WcfGestionStock.Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="WcfGestionStock1.xsd" MetadataType="Schema" ID="1319f21d-ee1a-4bcd-96f3-51d4528ea3cc" SourceId="1" SourceUrl="http://desktop-d5tcr83/SynchroWCF/WcfGestionStock.Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="WcfGestionStock.disco" MetadataType="Disco" ID="da40aa22-1ab5-496b-a6cc-19f3cd5d48a0" SourceId="1" SourceUrl="http://desktop-d5tcr83/SynchroWCF/WcfGestionStock.Service1.svc?disco" />
+    <MetadataFile FileName="WcfGestionStock2.xsd" MetadataType="Schema" ID="6e186f16-2f2d-455e-b2e1-5a03fa6988a3" SourceId="1" SourceUrl="http://desktop-d5tcr83/SynchroWCF/WcfGestionStock.Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="f001daa0-37c1-4ab3-9cca-f7a99a1b18b6" SourceId="1" SourceUrl="http://desktop-d5tcr83/SynchroWCF/WcfGestionStock.Service1.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
